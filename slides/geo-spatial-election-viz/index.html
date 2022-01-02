@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu837153259aa3eaf233be5c21ab790472_13982_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu837153259aa3eaf233be5c21ab790472_13982_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/slides/geo-spatial-election-viz/">
+
+  <title>Geo Spaial Data Visualization | Mohammad Abdul Hadi</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/black.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+
+  
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/css/print/pdf.css' : 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      <h1 id="geo-spaial-data-visualization">Geo Spaial Data Visualization</h1>
+<h3 id="and-critical-metrics-predictions-for-canadian-elections">and Critical Metrics Predictions for Canadian Elections</h3>
+<p>
+<a href="https://github.com/Mohammad-Abdul-Hadi/scraper-for-canadianelectionsdatabase.ca" target="_blank" rel="noopener">Code</a> | 
+<a href="https://arxiv.org/pdf/2009.05936.pdf" target="_blank" rel="noopener">Paper</a></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="problem-statement">Problem Statement</h2>
+<ul>
+<li>Abundance of open-source election databases</li>
+<li>Lack of concise and insightful data interpretation tools</li>
+<li>User Inability to process information in a consistently comparable way</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="proposed-solution">Proposed Solution</h2>
+<p>We proposed a data interpretation tool with following components:</p>
+<ul>
+<li>Data Visualization</li>
+<li>Trend Analysis</li>
+<li>Prediction</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="challenges">Challenges</h2>
+<p>For this case study, we required to extract validated dataset of Canadian elections from different resources. The database developed by Dr. Anthony Sayers at the Department of Political Science at the University of Calgary is one of the most reliable, consistent, and accessible databases for Canadian elections.</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<ul>
+<li>No direct access to the election-dataset.</li>
+<li>No uniform method to retrieve the data from server</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="component-scraper">Component: Scraper</h2>
+<p>For our data extraction task, we separate the Canadian Election Database webpages into two categories.</p>
+<ul>
+<li>Static pages and</li>
+<li>Dynamic pages.</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<ul>
+<li>The federal election part of the website loads static pages upon clicking on any of the link to a federal election.</li>
+<li>The Provincial election part of the website makes the browser send an AJAX request to the server and dynamically update the webpage with the information received.</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<ul>
+<li>For the first phase of the data extraction, we store all the election data into different csv file in our server. We have used Beautiful Soup to extract information from the static pages and store them.</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<ul>
+<li>In the second phase of data extraction, we retrieve the information from the dynamically loaded webpages for provincial elections. Our second scraper function sends an AJAX request with appropriate parameters to the websites’ server on behalf of the browser. Upon receiving the AJAX request, the server sends all the associated response in a JSON file format to our function.</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="component-geo-spatial-visualization">Component: Geo-Spatial Visualization</h2>
+<p>In the second component of the tool, we have generated Geo-spatial map using R script. We needed get the actual map data with longitude and latitude information. In the case of Canada, central statistics agency provided map shape files that we could use. The Shape File format (.shp) is the most widely-used standard for maps.</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="conclusion">Conclusion</h2>
+<p>Open data is meant to be used by the public and provide data-driven decisions. However, visualization tools are required to make the data interpretable.</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<p>One of the other challenges to provide the analysis and visualization tools for open data is the different formats of the data that are published by various parties in separate databases.</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<p>In this paper, we provided architecture and the technical details of an open-source tool that we developed for collecting data, and visualizing and analyzing information.</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<p>Although the tool is developed explicitly for Canadian Election data, the technical details and the approach can be used by researchers from various fields and developers to address the issue of open data, such as having separate databases with no interpretation tool</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h1 id="questions">Questions?</h1>
+<p>
+<a href="https://twitter.com/mohammad_a_hadi" target="_blank" rel="noopener">Ask</a></p>
+<p>
+<a href="https://youtu.be/3OyHh4OqWRI" target="_blank" rel="noopener">Presentation</a></p>
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+
+  <script>
+    window.revealPlugins = { dependencies: [
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/zoom-js/zoom.js', async: true },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/math/math.js', async: true },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/print-pdf/print-pdf.js', async: true },
+      
+      { src: '\/js\/vendor\/reveal.js\/plugin\/notes\/notes.js', async: true }
+    ]};
+
+    let revealDefaults = { center: true, controls: true, history: true, progress: true, transition: 'slide', mouseWheel: true };
+    let revealOptions = Object.assign({}, revealDefaults, revealPlugins);
+    Reveal.initialize(revealOptions);
+  </script>
+
+</body>
+</html>

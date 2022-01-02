@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides | Mohammad Abdul Hadi</title>
+    <link>/slides/</link>
+      <atom:link href="/slides/index.xml" rel="self" type="application/rss+xml" />
+    <description>Slides</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Mohammad-Abdul-Hadi, 2021</copyright><lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>PTM Empirical Study</title>
+      <link>/slides/emp-study-ptm/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/slides/emp-study-ptm/</guid>
+      <description>&lt;h1 id=&#34;evaluating-ptms-for-user-feedback-analysis-in-se&#34;&gt;Evaluating PTMS for User Feedback Analysis in SE&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/2104.05861&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pre-print&lt;/a&gt; | 
+&lt;a href=&#34;https://docs.google.com/presentation/d/1NgKxgn2PZ_QKxZwLCXYtPzIe-oNXFevj/edit?usp=sharing&amp;amp;ouid=115117445400598553695&amp;amp;rtpof=true&amp;amp;sd=true&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Analyzing app reviews have proved to be useful for many areas of software engineering.&lt;/li&gt;
+&lt;li&gt;Automatic classification of app reviews requires extensive efforts to manually curate a labeled dataset.&lt;/li&gt;
+&lt;li&gt;Recent pre-trained neural language models (PTM) are trained on large corpora in an unsupervised manner and have found success in solving similar Natural Language Processing problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We investigate the benefits of PTMs for app review classification compared to the existing models,&lt;/li&gt;
+&lt;li&gt;We also examine the transferability of PTMs in multiple settings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-method&#34;&gt;Proposed Method&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We empirically study the accuracy and time efficiency of PTMs compared to prior approaches using six datasets from literature. We also investigate the performance of the PTMs trained on app reviews.&lt;/li&gt;
+&lt;li&gt;We set up studies to evaluate PTMs in multiple settings: binary vs. multi-class classification, zero-shot classification, multi-task setting, and classification of reviews from different resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contributions&#34;&gt;Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the first study that explores the difference between four PTMs and four existing tools/approaches on six different app review datasets with different sizes and labels.&lt;/li&gt;
+&lt;li&gt;We are the first to explore the performance of general versus domain-specific pre-trained PTMs for app review classification.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the first empirical study to examine the accuracy and efficiency of PTMs in four different settings: binary vs. multi-class classification, zero shot setting, multi-task setting, and setting in which training data is from one resource (e.g., App Store) and the model is tested on data from another platform (e.g., Twitter).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;research-questions&#34;&gt;Research Questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;RQ1:&lt;/em&gt; How accurate and efficient are the PTMs in the classification of app reviews compared to the existing tools?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;RQ2:&lt;/em&gt; How does the performance of the PTMs change when they are pre-trained on app-review dataset, instead of a generic dataset (e.g., Wiki-documents, book corpus)?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;RQ3:&lt;/em&gt; How do the PTMs perform in the following settings?
+(a) Binary vs multi-class setting,
+(b) Zero-shot classification,
+(c) Multi-task setting (i.e., different app-review analysis tasks),
+(d) Classification of user-reviews collected from different resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dataset 1 (D1):&lt;/em&gt; This dataset is procured by Gu and Kim (contains 34,000 reviews from 17 popular Android apps; labeled with 5 classes)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dataset 2 (D2):&lt;/em&gt; This dataset is procured by Stanik et al. (contains 6,406 app reviews from Google Play and 10,364 tweets which are labeled manually into three classes: Problem Report, Inquiry, and Irrelevant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dataset 3 (D3):&lt;/em&gt; This dataset is provided by Lu and Liang (contains 2,000 review sentences from 2 apps, one app from Google Play and another from Apple App Store; the reviews are classified into six categories)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dataset 4 (D4):&lt;/em&gt; This dataset was procured by Maalej and Nabil (contains 2,000 manually labeled reviews from random apps selected from top apps in different categories; the reviews are classified into four categories)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dataset 5 (D5):&lt;/em&gt; This dataset is published by Guo et al. (contains 1,500 app reviews from randomly selected 151 apps from Apple App Store; the reviews are classified into three categories)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dataset 6 (D6):&lt;/em&gt; This dataset was procured by Guzman et al.; (contains 1820 reviews of 3 apps from Apple App Store and 4 apps from Google Play; this dataset includes seven categories)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/MGPKt5Nb9HM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AOBTM</title>
+      <link>/slides/aobtm/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/aobtm/</guid>
+      <description>&lt;h1 id=&#34;aobtm---adaptive-online-biterm-topic-model&#34;&gt;AOBTM - Adaptive Online Biterm Topic Model&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/Mohammad-Abdul-Hadi/AOBTM-Adaptive-Online-Biterm-Topic-Modeling&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; | 
+&lt;a href=&#34;https://arxiv.org/pdf/2009.09930.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;App reviews have dynamic nature&lt;/li&gt;
+&lt;li&gt;Discussed topics in the app-reviews change over time for different versions of app.&lt;/li&gt;
+&lt;li&gt;The changes in the topics should be analyzed to reveal important issues in the app update&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conventional-inadequate-approaches&#34;&gt;Conventional (Inadequate) Approaches&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Conventional topic models, such as LDA, PLSA, BTM&lt;/li&gt;
+&lt;li&gt;Online Topic Modeling algorithms, such as OLDA, OBTM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-approach--contributions&#34;&gt;Proposed Approach &amp;amp; Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Adaptive Online Biterm Topic Model (AOBTM)&lt;/li&gt;
+&lt;li&gt;Parallel algorithms to automatically determine the optimal number of topics&lt;/li&gt;
+&lt;li&gt;Parallel algorithms to automatically determine the best number of previous version to consider&lt;/li&gt;
+&lt;li&gt;Open sourced Code: github.com/Mohammad-Abdul-Hadi/AOBTM-Adaptive-Online-Biterm-Topic-Modeling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;research-questions&#34;&gt;Research Questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Can AOBTM achieve better performance compared to baselines?&lt;/li&gt;
+&lt;li&gt;How different parameter settings impact the performance of AOBTM?&lt;/li&gt;
+&lt;li&gt;How discriminative and coherent are the topics discovered when parameters are set by proposed parallel algorithms?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;observations&#34;&gt;Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AOBTM delivers the highest PMI_Scores in every dataset&lt;/li&gt;
+&lt;li&gt;AOBTM delivers the highest Dis_Scores in every dataset except for Tweets2020&lt;/li&gt;
+&lt;li&gt;AOBTM also delivers the highest scores in every dataset for Precision, Recall, and F_hybrid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;We acknowledge that AOBTM is time-expensive; but the run-time is still comparable to adaptive online algorithms when the dataset is small.&lt;/li&gt;
+&lt;li&gt;AOBTM outperforms AOLDA in runtime for NOAA Radar dataset, which has the lowest number of average short texts per version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Proposed a novel Adaptive topic modeling algorithm, AOBTM&lt;/li&gt;
+&lt;li&gt;AOBTM discovers coherent and discriminative topics from short texts&lt;/li&gt;
+&lt;li&gt;AOBTM addresses the problems with conventional topic models by adopting a version sensitive strategy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Proposed two parallel algorithms to determine the value of the two most important parameters of our model automatically&lt;/li&gt;
+&lt;li&gt;The results of several experiments on different datasets conform the performance of AOBTM compared to the state-of-the-art algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/0xxmmfIRsHY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Review-Viz</title>
+      <link>/slides/review-viz/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/review-viz/</guid>
+      <description>&lt;h2 id=&#34;reviewviz---assisting-developers-perform-empirical-study-on-energy-related-app-reviews&#34;&gt;ReviewViz - Assisting Developers Perform Empirical Study on Energy Related App Reviews&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/Mohammad-Abdul-Hadi/Result-Set-Visualization-d3js-R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; | 
+&lt;a href=&#34;https://arxiv.org/pdf/2009.06027&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A significant issue for app developers: Energy inefficiency&lt;/li&gt;
+&lt;li&gt;No mechanism to track progress in a shared community&lt;/li&gt;
+&lt;li&gt;No dedicated visualization platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-approach---reviewviz&#34;&gt;Proposed Approach - ReviewViz&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Interactive web-browser based Visualization Tool&lt;/li&gt;
+&lt;li&gt;Helping developers to mine different features from user reviews&lt;/li&gt;
+&lt;li&gt;Mechanism to track progress in a shared community&lt;/li&gt;
+&lt;li&gt;Automatic Integration of updated result in dynamic-data structure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tool-architecture&#34;&gt;Tool Architecture&lt;/h2&gt;
+&lt;p&gt;The architecture of the tool contains two main components. The components were structured based on two essential purposes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Present the extensive outcome of classification techniques of the energy-related reviews and&lt;/li&gt;
+&lt;li&gt;Demonstrate the outcome of topic modeling approaches to automatically discover underlying issues causing energy inefficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;observations&#34;&gt;Observations&lt;/h2&gt;
+&lt;p&gt;We have provided our visualization tool to four developers who participated in our study. The developers had the independence of not choosing the visualization tool for careful inspection of the resultant dataset, but all of them found the visualization tool to be highly conducive for the exploration of the result set.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We have also invited 4 of the undergrad students (who had the basic knowledge of machine learning and were paid for the tool-evaluation) to find out the perspective of fresh/new users. All of them reported that visualization tool to be robust and engaging.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the student participants pointed out the lack of options presented in the topic modeling part, which we found to be true. Nevertheless, at the same time, the comprehensiveness, smooth interactability, aesthetic features, and user-friendliness of the tool was also highly commended.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Before implementation, we have researched different ways to find a convenient and concise way of presenting the generated data so that developers could compare and utilize the extracted information with maximum efficiency. We have successfully delivered an interactive visualization tool that would be constructive and supportive for the developers who frequently analyze and inspect user feedbacks to identify energy efficiency issues.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/GclzhsALRP8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geo Spaial Data Visualization</title>
+      <link>/slides/geo-spatial-election-viz/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/geo-spatial-election-viz/</guid>
+      <description>&lt;h1 id=&#34;geo-spaial-data-visualization&#34;&gt;Geo Spaial Data Visualization&lt;/h1&gt;
+&lt;h3 id=&#34;and-critical-metrics-predictions-for-canadian-elections&#34;&gt;and Critical Metrics Predictions for Canadian Elections&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/Mohammad-Abdul-Hadi/scraper-for-canadianelectionsdatabase.ca&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; | 
+&lt;a href=&#34;https://arxiv.org/pdf/2009.05936.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Abundance of open-source election databases&lt;/li&gt;
+&lt;li&gt;Lack of concise and insightful data interpretation tools&lt;/li&gt;
+&lt;li&gt;User Inability to process information in a consistently comparable way&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-solution&#34;&gt;Proposed Solution&lt;/h2&gt;
+&lt;p&gt;We proposed a data interpretation tool with following components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Visualization&lt;/li&gt;
+&lt;li&gt;Trend Analysis&lt;/li&gt;
+&lt;li&gt;Prediction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;
+&lt;p&gt;For this case study, we required to extract validated dataset of Canadian elections from different resources. The database developed by Dr. Anthony Sayers at the Department of Political Science at the University of Calgary is one of the most reliable, consistent, and accessible databases for Canadian elections.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;No direct access to the election-dataset.&lt;/li&gt;
+&lt;li&gt;No uniform method to retrieve the data from server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;component-scraper&#34;&gt;Component: Scraper&lt;/h2&gt;
+&lt;p&gt;For our data extraction task, we separate the Canadian Election Database webpages into two categories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Static pages and&lt;/li&gt;
+&lt;li&gt;Dynamic pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;The federal election part of the website loads static pages upon clicking on any of the link to a federal election.&lt;/li&gt;
+&lt;li&gt;The Provincial election part of the website makes the browser send an AJAX request to the server and dynamically update the webpage with the information received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;For the first phase of the data extraction, we store all the election data into different csv file in our server. We have used Beautiful Soup to extract information from the static pages and store them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;In the second phase of data extraction, we retrieve the information from the dynamically loaded webpages for provincial elections. Our second scraper function sends an AJAX request with appropriate parameters to the websites’ server on behalf of the browser. Upon receiving the AJAX request, the server sends all the associated response in a JSON file format to our function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;component-geo-spatial-visualization&#34;&gt;Component: Geo-Spatial Visualization&lt;/h2&gt;
+&lt;p&gt;In the second component of the tool, we have generated Geo-spatial map using R script. We needed get the actual map data with longitude and latitude information. In the case of Canada, central statistics agency provided map shape files that we could use. The Shape File format (.shp) is the most widely-used standard for maps.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Open data is meant to be used by the public and provide data-driven decisions. However, visualization tools are required to make the data interpretable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the other challenges to provide the analysis and visualization tools for open data is the different formats of the data that are published by various parties in separate databases.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In this paper, we provided architecture and the technical details of an open-source tool that we developed for collecting data, and visualizing and analyzing information.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Although the tool is developed explicitly for Canadian Election data, the technical details and the approach can be used by researchers from various fields and developers to address the issue of open data, such as having separate databases with no interpretation tool&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/3OyHh4OqWRI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

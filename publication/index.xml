@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Mohammad Abdul Hadi</title>
+    <link>/publication/</link>
+      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Mohammad-Abdul-Hadi, 2021</copyright><lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu837153259aa3eaf233be5c21ab790472_13982_512x512_fill_lanczos_center_2.png</url>
+      <title>Publications</title>
+      <link>/publication/</link>
+    </image>
+    
+    <item>
+      <title>Evaluating Pre-Trained Models for User Feedback Analysis in Software Engineering</title>
+      <link>/publication/emp-study-on-ptms/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/emp-study-on-ptms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AOBTM - Adaptive Online Biterm Topic Modeling for Version Sensitive Short-texts Analysis</title>
+      <link>/publication/aobtm/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/aobtm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ReviewViz - Assisting Developers Perform Empirical Study on Energy Consumption Related Reviews for Mobile Applications</title>
+      <link>/publication/review-viz/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/review-viz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geo-Spatial Data Visualization and Critical Metrics Predictions for Canadian Elections</title>
+      <link>/publication/geo-spatial-election-viz/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/geo-spatial-election-viz/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

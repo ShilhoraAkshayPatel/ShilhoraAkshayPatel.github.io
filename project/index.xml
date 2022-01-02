@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Mohammad Abdul Hadi</title>
+    <link>/project/</link>
+      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Mohammad-Abdul-Hadi, 2021</copyright><lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu837153259aa3eaf233be5c21ab790472_13982_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>/project/</link>
+    </image>
+    
+    <item>
+      <title>Empirical Study on PTMs for App Reviews classification</title>
+      <link>/project/ptm-ar-classification/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/project/ptm-ar-classification/</guid>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context:&lt;/h2&gt;
+&lt;p&gt;Mobile app reviews written by users on app stores or social media are significant resources for app developers.Analyzing app reviews have proved to be useful for many areas of software engineering (e.g., requirement engineering, testing). Automatic classification of app reviews requires extensive efforts to manually curate a labeled dataset. When the classification purpose changes (e.g. identifying bugs versus usability issues or sentiment), new datasets should be labeled, which prevents the extensibility of the developed models for new desired classes/tasks in practice. Recent pre-trained neural language models (PTM) are trained on large corpora in an unsupervised manner and have found success in solving similar Natural Language Processing problems. However, the applicability of PTMs is not explored for app review classification.&lt;/p&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective:&lt;/h2&gt;
+&lt;p&gt;We investigate the benefits of PTMs for app review classification compared to the existing models, as well as the transferability of PTMs in multiple settings.&lt;/p&gt;
+&lt;h2 id=&#34;method&#34;&gt;Method:&lt;/h2&gt;
+&lt;p&gt;We empirically study the accuracy and time efficiency of PTMs compared to prior approaches using six datasets from literature. In addition, we investigate the performance of the PTMs trained on app reviews (i.e. domain-specific PTMs) . We set up different studies to evaluate PTMs in multiple settings: binary vs. multi-class classification, zero-shot classification (when new labels are introduced to the model), multi-task setting, and classification of reviews from different resources. The datasets are manually labeled app review datasets from Google Play Store, Apple App Store, and Twitter data. In all cases, Micro and Macro Precision, Recall, and F1-scores will be used and we will report the time required for training and prediction with the models.&lt;/p&gt;
+&lt;p&gt;In this study, we aim to explore the benefits of PTMs compared to the existing approaches for app review analysis, specifically app issue-classification tasks. We define the app issue-classification as the task of extracting useful information from users’ feedback which can be requirements related, release planning related, and software maintenance related. The extracted information helps identifying different aspects, including feature requests, aspect evaluations (e.g., feature strength, feature shortcoming, application performance), problem reports, usability, portability, reliability, privacy and security, energy related, appraisals, inquiries about the application, etc. from app reviews. Our goal is to investigate accuracy and time efficiency of PTMs for classification of different datasets with various labels and multiple tasks (i.e. issue classification and sentiment analysis of app reviews). Therefore, experiments will be conducted in different settings. These experiments will provide baselines on the applicability of PTMs for app review analysis including cost of using them (in term of required time for predictions), and their capability to reduce the manual effort required for labeling large datasets. We expect that PTMs can achieve at least the same performance as the current approaches, as well as being beneficial to be used for multiple classification tasks. The contributions of this study are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This is the first study that explores the applicability of PTMs for automatic app issue classification tasks compared to the existing tools.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We will conduct an extensive comparison between four PTMs and four existing tools/approaches on six different app review datasets with different sizes and labels.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We are the first to explore the performance of general versus domain-specific pre-trained PTMs for app review classification.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This is the first empirical study to examine the accuracy and efficiency of PTMs in four different settings: binary vs. multi-class classification, zero shot setting, multi-task setting, and setting in which training data is from one resource (e.g. App Store) and the model is tested on data from another platform (e.g. Twitter).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AOBTM</title>
+      <link>/project/aobtm/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/aobtm/</guid>
+      <description>&lt;p&gt;Analysis of mobile app reviews has shown its important role in requirement engineering, software maintenance and evolution of mobile apps. Mobile app developers check their users&amp;rsquo; reviews frequently to clarify the issues experienced by users or capture the new issues that are introduced due to a recent app update. App reviews have a dynamic nature and their discussed topics change over time. The changes in the topics among collected reviews for different versions of an app can reveal important issues about the app update. A main technique in this analysis is using topic modeling algorithms. However, app reviews are short texts and it is challenging to unveil their latent topics over time. Conventional topic models such as Latent Dirichlet Allocation (LDA) and Probabilistic Latent Semantic Analysis (PLSA) suffer from the sparsity of word co-occurrence patterns while inferring topics for short texts. Furthermore, these algorithms cannot capture topics over numerous consecutive time-slices (or versions). Online topic modeling algorithms such as Online LDA (OLDA) and Online Biterm Topic Model (OBTM) speed up the inference of topic models for the texts collected in the latest time-slice by saving a fraction of data from the previous time-slice. But these algorithms do not analyze the statistical-data of all the previous time-slices, which can confer contributions to the topic distribution of the current time-slice.In this paper, we propose Adaptive Online Biterm Topic Model (AOBTM) to model topics in short texts adaptively. AOBTM alleviates the sparsity problem in short-texts and considers the statistical-data for an optimal number of previous time-slices. We also propose parallel algorithms to automatically determine the optimal number of topics and the best number of previous versions that should be considered in topic inference phase. Automatic evaluation on collections of app reviews and real-world short text datasets confirm that AOBTM can find more coherent topics and outperforms the state-of-the-art baselines. For reproducibility of the results, we open source all scripts.&lt;/p&gt;
+&lt;p&gt;In this paper, we propose a new adaptive online topic model for short texts which takes previous versions’ varying contribution into account. We refer to this novel model as the Adaptive Online Biterm Topic Model (AOBTM). AOBTM inherits the characteristics of BTM to deal with the data sparsity issue. It is an online algorithm that can scale for the increasing volume of the dataset that is generated frequently. AOBTM also endows the statistics of the previous versions with different contributions to the topic distributions of the current version of the dataset. Also, we have employed a preprocessing technique that is useful for yielding better top contributing key-terms to help the manual investigation of the inferred topics. Our contributions are enlisted below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We propose a novel method called AOBTM for version sensitive content analysis for short texts. This method adaptively combines the topic distributions of a selected number prior versions to generate topic distributions of the current version.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We propose two parallel algorithms; the first algorithm can identify an optimal number of topics to be derived in the latest version, and the second algorithm can identify the optimal number of previous versions to be taken into consideration for adaptive aggregation of statistical data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To encourage replicability, we make all scripts, codes, and graphs available to the community.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We have conducted experiments on app review datasets and Twitter dataset with large number of records to evaluate performance of AOBTM compared to five baseline algorithms. Also, we integrated AOBTM into the state of the art online app-review analysis framework called IDEA for comparison. Our results show that topics captured by AOBTM are more coherent compared to the topics extracted by baseline methods.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Review-Viz</title>
+      <link>/project/review-viz/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/project/review-viz/</guid>
+      <description>&lt;p&gt;In our recent work, we have developed a replication package for the mobile application developers to help them isolate/classify energyrelated feedbacks from app-reviews and further investigate these reviews for potential issues crucial to the energy efficiency of the application. This package lets the developer decide which model to use and which features to choose based on their convenience at any given time. Additionally, the package helps the developer to deploy topic modeling algorithms to identify new issues/causes related to energy efficiency. Using this package, we have performed an empirical study with the participation of 4 developers. They have exhaustively performed all the models, feature combinations, and different topic modeling algorithms and carefully examined the generated result set manually.&lt;/p&gt;
+&lt;h2 id=&#34;contribution&#34;&gt;Contribution&lt;/h2&gt;
+&lt;p&gt;The resultant computational analysis (much like the output of our replication package) can be effectively combined with human reasoning with the help of powerful visualization that could lead to increased efficiency and more valuable results. So, we developed an interactive visualization tool to help the developers assimilate the result of the discussed empirical study of over 90 models, features combinations. Additionally, The tool also helps to visualize the output of the topic modeling algorithms to identify recent potential issues most likely to cause energy inefficiency in the app. For flexibility, it gives the developers options to choose the representation of a certain outcome.&lt;/p&gt;
+&lt;h2 id=&#34;tool-architecture&#34;&gt;Tool Architecture&lt;/h2&gt;
+&lt;p&gt;The architecture of the tool contains two main components. The components were structured based on two essential purposes: (a) Present the extensive outcome of classification techniques of the energy-related reviews and (b) Demonstrate the outcome of topic modeling approaches to automatically discover underlying issues causing energy inefficiency. Each component is necessary to accomplish insightful data interpretation for helping developers to process all the information in a consistently comparable way.&lt;/p&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;We have provided our visualization tool to four developers who participated in our study. The developers had the independence of not choosing the visualization tool for careful inspection of the resultant dataset, but all of them found the visualization tool to be highly conducive for the exploration of the result set. We have also invited 4 of the undergrad students (who had the basic knowledge of machine learning and were paid for the tool-evaluation) to find out the perspective of fresh/new users. All of them reported that visualization tool to be robust and engaging. One of the student participants pointed out the lack of options presented in the topic modeling part, which we found to be true. Nevertheless, at the same time, the comprehensiveness, smooth interactability, aesthetic features, and user-friendliness of the tool was also highly commended. Before implementation, we have researched different ways to find a convenient and concise way of presenting the generated data so that developers could compare and utilize the extracted information with maximum efficiency. We have successfully delivered an interactive visualization tool that would be constructive and supportive for the developers who frequently analyze and inspect user feedbacks to identify energy efficiency issues.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geo Spaial Data Visualization</title>
+      <link>/project/geo-spatial-election-viz/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/project/geo-spatial-election-viz/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Open data published by various organizations is intended to make the data available to the public. All over the world, numerous organizations maintain a considerable number of open databases containing a lot of facts and numbers. However, most of them do not offer a concise and insightful data interpretation or visualization tool, which can help users to process all of the information in a consistently comparable way. Canadian Federal and Provincial Elections is an example of these databases. This information exists in numerous websites, as separate tables so that the user needs to traverse through a tree structure of scattered information on the site, and the user is left with the comparison, without providing proper tools, datainterpretation or visualizations.&lt;/p&gt;
+&lt;p&gt;In this paper, we provide technical details of addressing this problem, by using the Canadian Elections data (since 1867) as a specific case study as it has numerous technical challenges. We hope that the methodology used here can help in developing similar tools to achieve some of the goals of publicly available datasets. The developed tool contains data visualization, trend analysis, and prediction components. The visualization enables the users to interact with the data through various techniques, including Geospatial visualization. To reproduce the results, we have open-sourced the tool.&lt;/p&gt;
+&lt;h2 id=&#34;scraper&#34;&gt;Scraper&lt;/h2&gt;
+&lt;p&gt;For this case study, we required to extract validated dataset of Canadian elections from different resources. The database developed by Dr. Anthony Sayers at the Department of Political Science at the University of Calgary is one of the most reliable, consistent, and accessible databases for Canadian elections. This is a web embedded database and can be accessed at: canadianelectionsdatabase.ca/
+This database contains information on Canadian federal, provincial, and territorial elections since 1867 and is arranged by-election, party, candidate, and district.&lt;/p&gt;
+&lt;p&gt;For our data extraction task, we separate the Canadian Election Database webpages into two categories. Static pages and Dynamic pages. The federal election part of the website loads static pages upon clicking on any of the link to a federal election. The loaded static page includes all the necessary information about the associated federal election.&lt;/p&gt;
+&lt;p&gt;The Provincial election part of the website does not load static pages upon clicking on any of the link to a provincial election. Instead, browser send an AJAX request to the server and dynamically update the webpage with the information received from the server in the form of AJAX response.&lt;/p&gt;
+&lt;p&gt;A challenge of working with this data is the lack of having a download option to retrieve and use this information (e.g., import to analysis tools). Therefore, we developed a scraper to scrape, extract necessary data, and store them in an appropriate format, to reduce further data cleaning and polishing effort. The extracted data is intended to be fed to the other two components of the tool. We have used 2 different scraper Python function to accommodate the extraction of election data by thoroughly crawling both static and dynamic pages.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For the first phase of the data extraction, we store all the election data into different csv file in our server. We have used Beautiful Soup to extract information from the static pages and store them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the second phase of data extraction, we retrieve the information from the dynamically loaded webpages for provincial elections. Our second scraper function sends an AJAX request with appropriate parameters to the websites’ server on behalf of the browser. Upon receiving the AJAX request, the server sends all the associated response in a JSON file format to our function. The scraper function unpacks the JSON file to retrieve and store all the information in our local-server like the right-hand image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;geo-spatial-data-visualization&#34;&gt;Geo-Spatial Data Visualization&lt;/h2&gt;
+&lt;p&gt;In the second component of the tool, we have generated Geo-spatial map using R script. We needed get the actual map data with longitude and latitude information. In the case of Canada, central statistics agency provided map shape files that we could use. The Shape File format (.shp) is the most widely-used standard for maps. We grabbed the files to convert them to a format the tidyverse library can use.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Open data is meant to be used by the public and provide data-driven decisions. However, visualization tools are required to make the data interpretable. One of the other challenges to provide the analysis and visualization tools for open data is the different formats of the data that are published by various parties in separate databases. In this paper, we provided architecture and the technical details of an open-source tool that we developed for collecting data, and visualizing and analyzing information. Although the tool is developed explicitly for Canadian Election data, the technical details and the approach can be used by researchers from various fields and developers to address the issue of open data, such as having separate databases with no interpretation tool&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
