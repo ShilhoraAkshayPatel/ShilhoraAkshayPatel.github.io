@@ -4143,7 +4143,7 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 2.5px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   text-align: left;
   cursor: pointer;
@@ -4155,7 +4155,9 @@ input[type="button"].btn-block {
 .active,
 .card:hover {
   background-color: #fff;
-  z-index: 20;
+  z-index: 80;
+  border-color: #f8c245;    
+  transition: border-color 0.6s ease;
 }
 
 .card:after {
@@ -4181,14 +4183,14 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 0.5px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  font-size: 14px;
-  text-align: center;
-  line-height: 1.5;
+  font-size: 12.5px;
+  text-align: left;
+  line-height: 1.8;
 }
 
 .edu-card {
   background: #fff;
-  border: 2.5px solid rgba(255, 255, 255, 0.09);
+  border: 2.6px solid rgba(255, 255, 255, 0.09);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   margin-top: 12px;
@@ -4237,7 +4239,7 @@ ul.ul-edu li .edu-description p.institution {
 }
 .seperator-wrapper .seperator {
   width: auto;
-  height: 4.2px;
+  height: 3.5px;
   animation: rotate 4s infinite alternate-reverse;
   -webkit-animation: rotate 4s infinite alternate-reverse;
 }
@@ -4314,6 +4316,7 @@ ul.ul-edu li .edu-description p.institution {
 .abstract {
   margin-top: 8px;
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .toggledText {
@@ -4345,35 +4348,47 @@ ul.ul-edu li .edu-description p.institution {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .research {
-  flex-direction: row;
-  word-wrap: break-word;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
   text-align: left;
-  padding: 1px;
+  padding: 2px;
   width: 100%;
   outline: none;
+  cursor: pointer;
 }
 
 .research-body {
   flex: 1 1 auto;
   min-height: 0px;
-  padding: 7px;
 }
 
 .research-title {
-  margin-bottom: 0.5rem;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.54);
 }
 
-.research:hover {
+.research-title:hover,
+.research-title:focus{
+  color:#207398;
+  transition: color 0.6s ease;
+}
+
+.research:hover,
+.research:focus {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
   background-color: #fff;
   z-index: 1000;
+  border-color: #f8c245;    
+  transition: border-color 0.6s ease;
+
 }
 
 .research:after {
@@ -4383,12 +4398,13 @@ ul.ul-edu li .edu-description p.institution {
   font-weight: bold;
   float: right;
   margin-right: 8%;
-  margin-top: -8%;
+  margin-top: -8.4%;
 }
 
 .active:after {
   content: "\2212";
 }
+
 
 .researchcontent {
   padding: 0 8px;
@@ -4396,12 +4412,13 @@ ul.ul-edu li .edu-description p.institution {
   overflow: hidden;
   transition: max-height 0.4s ease-out;
   background-color: #fff;
-  background-clip: border-box;
   border: 0.2px solid rgba(0, 0, 0, 0.09);
   border-radius: 0.25rem;
-  font-size: 14px;
+  font-size: 12.5px;
   text-align: left;
   line-height: 1.5;
+  margin-top: 3px;
+
 }
 
 .card > hr {
@@ -5015,9 +5032,11 @@ a.badge-dark.focus {
   align-items: flex-start;
   word-wrap: break-word;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.5rem;
+  border: 2.5px solid rgba(0, 0, 0, 0.125);
+  border-radius: 6px;
   padding: 14px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 4;
 }
 
 .media:hover,
@@ -5025,6 +5044,10 @@ a.badge-dark.focus {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
   background-color: #fff;
   z-index: 100;
+  border-color: #f8c245;    
+  transition: border-color 0.6s ease;
+  cursor: pointer;
+  
 }
 .media-body {
   flex: 1;
@@ -9401,8 +9424,8 @@ a[data-fancybox] {
   color: #ddd;
 }
 footer {
-  margin: 4rem 0 0;
-  padding: 2rem 0;
+  margin: 0.2rem 0 0;
+  padding: 0.2rem 0;
   width: 100%;
 }
 footer p {
@@ -9784,17 +9807,21 @@ ul.nav-icons li.nav-item a.nav-link {
 }
 .card-simple {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.09);
-  border-radius: 3px;
+  border: 2.5px solid rgba(0, 0, 0, 0.09);
+  border-radius: 4px;
   margin-top: 20px;
   padding: 15px 20px 15px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 4;
 }
 
 .card-simple:hover,
 .card-simple:focus {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
   background-color: #fff;
-  z-index: 1000;
+  z-index: 80;
+  border-color: #f8c245;    
+  transition: border-color 0.6s ease;
 }
 
 .card-simple:first-of-type {
@@ -9819,11 +9846,13 @@ a.summary-link {
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-out;
+
 }
 .card .card-image {
   display: block;
   position: relative;
-  min-height: 100px;
+  width: auto;
+  height: auto;
 }
 .card h4 {
   font-size: 0.9rem;
@@ -10608,7 +10637,6 @@ ul.ul-edu li .description p.institution {
 }
 .project-card {
   position: relative;
-  width: calc(33.3% - 2 * 20px);
 }
 @media screen and (max-width: 1199px) {
   .project-card {
