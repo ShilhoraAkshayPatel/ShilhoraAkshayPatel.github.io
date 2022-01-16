@@ -4229,6 +4229,38 @@ ul.ul-edu li .edu-description p.institution {
   
 }
 
+.projectcard {
+  flex-direction: row;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 2.5px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  outline: none;
+}
+
+.active,
+.projectcard:hover {
+  background-color: #fff;
+  z-index: 80;
+  border-color: #f8c245;    
+  transition: border-color 0.6s ease;
+}
+
+.projectcard:after {
+  font-size: 34px;
+  color: #000;
+  font-weight: bold;
+  float: right;
+  margin-right: 8%;
+  margin-top: -16%;
+}
+
+
 .seperator-wrapper {
   width: auto;
   position: fixed;
