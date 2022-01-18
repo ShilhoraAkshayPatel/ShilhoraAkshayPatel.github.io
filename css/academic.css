@@ -10121,10 +10121,11 @@ article {
   clear: both;
 }
 .article-banner {
-  width: 55%;
-  height: 5%;
+  width: 290px;
+  height: 300px;
   display: block;
   margin: 0 auto;
+  float: left;
 }
 .featured-image-wrapper {
   position: relative;
