@@ -10121,9 +10121,8 @@ article {
   clear: both;
 }
 .article-banner {
-  width: 290px;
-  height: 300px;
-  display: block;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   float: left;
 }
