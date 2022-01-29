@@ -4059,7 +4059,7 @@ input[type="button"].btn-block {
   display: none;
 }
 .navbar-light .navbar-brand {
-  color: #535a5a;
+  color: #0D0D0D;
 }
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
@@ -4196,6 +4196,7 @@ input[type="button"].btn-block {
   margin-top: 12px;
   padding: 22px;
   z-index: 4;
+  
 }
 
 .edu-description {
@@ -4205,10 +4206,11 @@ input[type="button"].btn-block {
 ul.ul-edu li .edu-description p {
   margin: 0;
 }
-ul.ul-edu li .edu-description p.course {
+.edu-description p.course {
   font-size: 1.22rem;
   font-family: "Segoe UI";
   font-weight: 550;
+  color: #242B2E;
 }
 ul.ul-edu li .edu-description p.institution {
   font-size: 0.9rem;
@@ -4221,8 +4223,6 @@ ul.ul-edu li .edu-description p.institution {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
   background-color: #fff;
   z-index: 12;
-  color:#207398;
-  transition: color 0.8s ease;
   border-color: #f8c245;    
   transition: border-color 0.8s ease;
   cursor: pointer;
@@ -4306,11 +4306,11 @@ ul.ul-edu li .edu-description p.institution {
   right: 0;
   left: 0;
   z-index: 1030;
-  margin-top: 4px;
+  margin-top: 7px;
 }
 .seperator-wrapper .seperator {
   width: auto;
-  height: 3.5px;
+  height: 2px;
   animation: rotate 4s infinite alternate-reverse;
   -webkit-animation: rotate 4s infinite alternate-reverse;
 }
@@ -4386,12 +4386,13 @@ ul.ul-edu li .edu-description p.institution {
 
 .abstract {
   margin-top: 8px;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
 .toggledText {
-  height: 50px;
+  height: 73px;
+  width: 95%;
   overflow: hidden;
 }
 
@@ -4407,6 +4408,8 @@ ul.ul-edu li .edu-description p.institution {
 .toggledText.toggle ~ #readmore span.readless-txt {
   display: block;
 }
+
+
 
 .edu-section {
   background-color: #fff;
@@ -4443,14 +4446,9 @@ ul.ul-edu li .edu-description p.institution {
 
 .research-title {
   padding: 10px;
-  color: rgba(0, 0, 0, 0.54);
+  color: #242B2E;
 }
 
-.research-title:hover,
-.research-title:focus{
-  color:#207398;
-  transition: color 0.6s ease;
-}
 
 .research:hover,
 .research:focus {
@@ -9753,6 +9751,7 @@ div.alert a {
   display: flex;
 }
 .navbar .navbar-nav .nav-link {
+  font-size: 1.25rem;
   color: #c9c9c9;
 }
 .navbar .navbar-nav .nav-link.active,
@@ -9813,8 +9812,10 @@ div.alert a {
   max-height: 60px;
   max-width: fit-content;
 }
+
+
 #navbar-main .main-menu-item ul li .nav-link {
-  color: #c9c9c9;
+  color: #46B2E0;
 }
 @media (max-width: 991.98px) {
   .navbar-brand-mobile-wrapper {
